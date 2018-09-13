@@ -1,6 +1,6 @@
-# {{ name }}
+# Nuxt kit starter
 
-> {{ description }}
+> Nuxt template with bootstrap 4 and dependencies
 
 ## Build Setup
 
