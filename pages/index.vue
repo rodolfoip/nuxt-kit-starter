@@ -16,21 +16,27 @@
 </template>
 
 <script>
+  import api from '../api/config'
+  import {mapGetters} from 'vuex'
   import AppLogo from '~/components/AppLogo.vue'
 
   export default {
     components: {
       AppLogo
     },
+    computed: {
+      ...mapGetters([
+        'posts'
+      ])
+    },
     data() {
       return {
         title: 'Título',
         subtitle: 'Subtítulo',
-        posts: []
       }
     },
-    created() {
-    },
-    methods: {}
+    mounted() {
+      this.$store.dispatch('getPosts')
+    }
   }
 </script>
