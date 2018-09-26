@@ -16,52 +16,159 @@ html {
   margin: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+.section-default {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+
+  @include media-breakpoint-up('lg') {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @include media-breakpoint-up('xl') {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
+.section--title {
+  margin-bottom: 1.6rem;
+  letter-spacing: -0.02rem;
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
+  @include media-breakpoint-up('sm') {
+    margin-bottom: 2rem;
+  }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-bottom: 0;
 
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+    font-size: 1.6rem;
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+    @include media-breakpoint-up('sm') {
+      font-size: 1.8rem;
+    }
 
-.links {
-  padding-top: 15px;
+    @include media-breakpoint-up('md') {
+      font-size: 2rem;
+    }
+  }
+
+  &--lined {
+    $lined-height-sm: .3rem;
+    $lined-height-lg: .45rem;
+
+    $lined-mtop-sm: .3rem;
+    $lined-mtop-lg: .5rem;
+
+    &:after {
+      content: '';
+      width: 4.5rem;
+      height: $lined-height-sm;
+      margin-top: $lined-mtop-sm;
+      background-color: $headings-color;
+      display: block;
+
+      @include media-breakpoint-up('lg') {
+        height: $lined-height-lg;
+        margin-top: $lined-mtop-lg;
+      }
+    }
+  }
+
+  &--sm {
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+
+      font-size: 1.2rem;
+
+      @include media-breakpoint-up('md') {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &--lg {
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+      font-size: 1.9rem;
+
+      @include media-breakpoint-up('lg') {
+        font-size: 2.2rem;
+      }
+
+      @include media-breakpoint-up('xl') {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  &--primary {
+    color: $primary;
+    &:after {
+      background-color: $primary;
+    }
+  }
+
+  &--white {
+    color: white;
+    &:after {
+      background-color: white;
+    }
+  }
+
+  &--light {
+    color: $light;
+    &:after {
+      background-color: $light;
+    }
+  }
+
+  &--secondary {
+    color: $secondary;
+    &:after {
+      background-color: $secondary;
+    }
+  }
+
+  &--subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+
+    @include media-breakpoint-up('lg') {
+      font-size: 1.4rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+      &--left#{$infix} {
+        text-align: left;
+        &:after {
+          margin-left: 0;
+          margin-right: auto;
+        }
+      }
+      &--right#{$infix} {
+        text-align: right;
+        &:after {
+          margin-left: auto;
+          margin-right: 0;
+        }
+      }
+      &--center#{$infix} {
+        text-align: center;
+        &:after {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
 }

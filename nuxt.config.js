@@ -1,6 +1,9 @@
 const webpack = require('webpack')
 
 module.exports = {
+  router: {
+    linkExactActiveClass: 'active',
+  },
   /*
   ** Headers of the page
   */

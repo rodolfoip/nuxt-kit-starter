@@ -8,8 +8,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <nuxt-link to="/" class="nav-item nav-link">Home</nuxt-link>
-            <nuxt-link class="nav-item nav-link" to="/about">About</nuxt-link>
+            <nuxt-link to="/" class="nav-item nav-link">Página Inicial</nuxt-link>
+            <nuxt-link class="nav-item nav-link" to="/about">Sobre</nuxt-link>
           </div>
         </div>
       </div>
