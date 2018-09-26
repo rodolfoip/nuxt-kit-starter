@@ -1,7 +1,7 @@
 <template>
-  <section class="container">
-    <div>
-      <div class="text-center">
+  <div class="home">
+    <section class="container">
+      <div>
         <h1 class="title">
           {{title}}
         </h1>
@@ -18,8 +18,8 @@
         </ul>
         <nuxt-link class="btn btn-danger" to="/about">About</nuxt-link>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script>

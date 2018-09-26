@@ -1,6 +1,13 @@
 <template>
-  <div>
-    {{post.title}}
+  <div class="container">
+    <h2 v-html="post.title.rendered"></h2>
+    <div class="content" v-html="post.excerpt.rendered"></div>
+    <nuxt-link to="/" class="btn btn-info">Home</nuxt-link>
+    <div class="big">
+      <pre>
+      {{post}}
+      </pre>
+    </div>
   </div>
 </template>
 
