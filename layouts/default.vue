@@ -10,6 +10,7 @@
           <div class="navbar-nav">
             <nuxt-link to="/" class="nav-item nav-link">Página Inicial</nuxt-link>
             <nuxt-link class="nav-item nav-link" to="/about">Sobre</nuxt-link>
+            <nuxt-link to="/blog" class="nav-item nav-link">Blog</nuxt-link>
           </div>
         </div>
       </div>
