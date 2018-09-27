@@ -13,7 +13,7 @@
 
 <script>
   import axios from 'axios'
-  import config from '../../api/config'
+  import config from '../../../api/config/index'
 
   export default {
     async asyncData({params}) {
