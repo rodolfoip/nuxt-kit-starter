@@ -76,6 +76,7 @@ export default {
       request.get(`posts`).then(response => {
         const data = [...response.data];
         if (response.status === 200 && response.data.length > 0) {
+          console.log(data)
           const filtered = {
             total: response.headers["x-wp-total"],
             totalPages: response.headers["x-wp-totalpages"],
