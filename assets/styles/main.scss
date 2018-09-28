@@ -172,3 +172,12 @@ html {
     }
   }
 }
+
+.post-item {
+  display: block;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
