@@ -3,7 +3,7 @@
     <section class="section-default bg-info">
       <div class="container">
         <h1 class="section--title section--title--light section--title--lined">
-          Blog
+          {{page.title}}
         </h1>
       </div>
     </section>
@@ -59,6 +59,20 @@
     },
     components: {
       appPostsList: postsList
+    },
+    data() {
+      return {
+        page: {}
+      }
+    },
+    created() {
+      this.getPage()
+    },
+    methods: {
+      getPage() {
+        api.getPage('blog')
+          .then(pageContent => this.page = pageContent)
+      }
     }
   }
 </script>
