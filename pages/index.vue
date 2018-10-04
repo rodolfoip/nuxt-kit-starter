@@ -4,10 +4,9 @@
       <div class="container">
         <div class="me--content">
           <div>
-            <h1><span>O</span>lá</h1>, sou Rodolfo
+            <h1><span>D</span>onec</h1>, aliquam sagittis
           </div>
-          e
-          <h3>Sou desenvolvedor Front End</h3>
+          <h3>Aliquam dapibus ullamcorper est</h3>
         </div>
       </div>
     </section>
