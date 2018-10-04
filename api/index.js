@@ -25,7 +25,8 @@ export default {
             guid: data.guid.rendered,
             link: data.link,
             slug: data.slug,
-            title: data.title.rendered
+            title: data.title.rendered,
+            acf: data.acf
           };
           resolve(filtered);
         } else {

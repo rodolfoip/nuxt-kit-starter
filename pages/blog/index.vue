@@ -66,10 +66,10 @@
       }
     },
     created() {
-      this.getPage()
+      this.getPageContent()
     },
     methods: {
-      getPage() {
+      getPageContent() {
         api.getPage('blog')
           .then(pageContent => this.page = pageContent)
       }
